@@ -2,7 +2,7 @@
 # Houdini Graph Editor Tools
 ## [de]amplify_keyframes.py 
 
-Amplify and deamplify scale towards zero +/- ten percent.
+Amplify and deamplify scales the graph towards zero by ten percent.
 
 I typically hotkey map these to **Ctrl+>** to increase and **Ctrl+<** to decrease.
 You can already do this with the box handle or, more recently, the Pull Push tool in the Animation Toolbar.
