@@ -5,9 +5,8 @@
 Amplifies or deamplifies the selected keyframes by ten percent.
 
 I hotkey map these to **Ctrl+>** to amplify and **Ctrl+<** to deamplify.
-You can already do this with the box handle or, more recently, the Pull Push tool in the Animation Toolbar.
 
-This is just a little faster and more comfortable; it is a little more "no-look" so you can keep your eyes on the animation and relax your stylus hand.
+Although the box handle and pull push tool both do the same thing, I find this method faster and more comfortable. It is a little more "no-look" so you can keep your eyes on the animation and relax your stylus hand.
 
 ## copy_and_offset.py
 
