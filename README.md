@@ -13,4 +13,4 @@ This is just a little faster and more comfortable; it is a little more "no-look"
 
 Duplicates a curve onto its children and offsets the keyframes by 5 frames. Good for mechanical chains, tails, etc.
 
-I currently have this hotkey mapped to *Ctrl+Shift+O*.
+I currently have this hotkey mapped to **Ctrl+Shift+O**.
