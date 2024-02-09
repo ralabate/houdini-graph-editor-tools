@@ -1,5 +1,13 @@
 import hou
 
+def get_all_outputs(node):
+    outputs = []
+    immediate_outputs = node.outputs()
+    outputs.extend(immediate_outputs)
+    for output_node in immediate_outputs:
+        outputs.extend(get_all_outputs(output_node))
+    return outputs        
+
 print("\n" * 100)
 
 # get that panetab
@@ -13,22 +21,26 @@ if channel_editor == None:
 else:
     channel_list = channel_editor.channelList()
     if len(channel_list.selected()) > 0:
-        master_parm = channel_list.selected()[0]
-        print(master_parm)
-        master_parm_name = master_parm.name()
-        print(master_parm_name)
-        node = master_parm.node()
-        print(node)
-        #top_level_children = [child for child in node.allSubChildren() if child.type().category() == hou.sopNodeTypeCategory()]
-        top_level_children = node.children()
-        if len(top_level_children) > 0:
-            for child in top_level_children:
-                print(child.name())
-                print(child.path())
-                channel_list.addParm(child.parm(master_parm_name), False, False, False)
+        selected_parm = channel_list.selected()[0]
+        print("Selected parm name: " + selected_parm.name())
+        print("Selected node name: " + selected_parm.node().name())
+        outputs = get_all_outputs(selected_parm.node())
+        print("Selected node outputs count: " + str(len(outputs)))
+        i = 0
+        if len(outputs) > 0:
+            for output in outputs:
+                i = i + 5
+                print("Output node name: " + output.name())
+                print("Output node path: " + output.path())
+                parm = output.parm(selected_parm.name())
+                parm.deleteAllKeyframes()
+                for key in selected_parm.keyframes():
+                    key.setFrame(key.frame() + i)
+                    parm.setKeyframe(key)
+                channel_list.addParm(parm)
             hou.playbar.setChannelList(channel_list)
         else:
-            print("ERROR: Selected channel's Op has no children!")
+            print("ERROR: Selected channel's Op has no outputs!")
         
     else:
         print("ERROR: No channel selected")
