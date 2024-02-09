@@ -11,8 +11,8 @@ This is just a little faster and more comfortable; it is a little more "no-look"
 
 ## copy_and_offset.py
 
-Duplicates a curve onto its children and offsets the keyframes by five frames.
+Duplicates a curve onto its children and offsets the time by five frames per child-level.
 
-I hotkey mapped this to **Ctrl+Shift+O**.
+I hotkey map this to **Ctrl+Shift+O**.
 
-Useful for setting up mechanical chains, tails, etc.
+This could be useful for setting up mechanical chains, mechanical tails, etc.
