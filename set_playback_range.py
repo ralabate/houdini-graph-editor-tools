@@ -11,8 +11,8 @@ if channel_editor == None:
 else:
     channel_graph = channel_editor.graph()
     selected_keyframes = channel_graph.selectedKeyframes()
-    first_frame = 999
-    last_frame = -999
+    first_frame = 9999
+    last_frame = -9999
     if len(selected_keyframes) > 0:
         for parm, keys in selected_keyframes.items():
             for key in keys:
