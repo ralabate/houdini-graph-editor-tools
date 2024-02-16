@@ -1,6 +1,3 @@
-#WIP MAYBE IF NOTHING HIGHLIGHTED CLEAR FRAME RANGE
-
-
 import hou
 
 # get that panetab
@@ -21,12 +18,14 @@ else:
             for key in keys:
                 if key.frame() <= first_frame:
                     first_frame = key.frame()
-                    print("updating first: " + str(first_frame))
+                    #print("updating first: " + str(first_frame))
                 if key.frame() >= last_frame:
                     last_frame = key.frame()
-                    print("updating last: " + str(last_frame))
-        print("CALLING WITH: " + str(first_frame) + " " + str(last_frame))                    
+                    #print("updating last: " + str(last_frame))
+        #print("CALLING WITH: " + str(first_frame) + " " + str(last_frame))                    
         hou.playbar.setPlaybackRange(first_frame, last_frame)      
     else:
-        pass
-        #print("ERROR: No keyframes selected")
+        global_first_frame = hou.playbar.frameRange()[0]
+        global_last_frame = hou.playbar.frameRange()[1]
+        hou.playbar.setPlaybackRange(global_first_frame, global_last_frame)      
+        #print("ERROR: No keyframes selected setting to " + str(global_first_frame) + "," + str(global_last_frame))
