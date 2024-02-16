@@ -17,3 +17,11 @@ I hotkey map this to **Ctrl+Shift+O**.
 For example, if you have `/obj/sphere1/tx` selected in the channel list it will copy and paste the `tx` curve onto `/obj/sphere2/tx`, `/obj/sphere3/tx`, `/obj/sphere4/tx`, etc. ofsetting the curve forward in time five frames, ten frames, fifteen frames, etc.
 
 This could be a useful starting point for animating overlap on mechanical chains, mechanical tails or mechanical snouts.
+
+## set_playback_range.py
+
+Sets the playback range based on the selected keyframes.
+
+I hotkey map this to **Ctrl+Shift+R**
+
+This is much faster than typing in numbers for me. If there are no keyframes selected it sets the playback range to the global frame range.
