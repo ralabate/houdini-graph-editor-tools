@@ -20,7 +20,7 @@ This is faster than mousing around and typing *=-1 in the value box.
 
 Sets the playback range based on the selected keyframes.
 
-I hotkey map this to **Ctrl+Shift+R**
+I hotkey map this to **Ctrl+Shift+R**.
 
 This is much faster than mousing around and typing in a pair of numbers. If there are no keyframes selected it sets the playback range to the global frame range.
 
