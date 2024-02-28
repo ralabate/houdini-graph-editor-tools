@@ -17,6 +17,9 @@ else:
         for parm, keys in selected_keyframes.items():
             for key in keys:
                 key.setValue(-1 * key.value())
+                key.setSlope(-1 * key.slope())
+                if (key.isSlopeTied() == False):
+                    key.setInSlope(-1 * key.inSlope())
                 parm.setKeyframe(key)
     else:
         pass
