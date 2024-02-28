@@ -14,7 +14,7 @@ Multiplies keyframes the selected keyframes by negative one.
 
 I hotkey map this to **Ctrl+?**.
 
-This is faster than mousing around and typing *=-1 in the value box.
+This is faster than stylusing around and typing *=-1 in the value box.
 
 ## set_playback_range.py
 
@@ -22,7 +22,7 @@ Sets the playback range based on the selected keyframes.
 
 I hotkey map this to **Ctrl+Shift+R**.
 
-This is much faster than mousing around and typing in a pair of numbers. If there are no keyframes selected it sets the playback range to the global frame range.
+This is much faster than stylusing around and typing in a pair of numbers. If there are no keyframes selected it sets the playback range to the global frame range.
 
 ## copy_and_offset.py
 
