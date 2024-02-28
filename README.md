@@ -10,11 +10,11 @@ Although the box handle and pull push tool both do the same thing, I find this m
 
 ## negate_keyframes.py
 
-Multiplies keyframes the selected keyframes by negative one.
+Multiplies the selected keyframes by negative one.
 
 I hotkey map this to **Ctrl+?**.
 
-This is faster than stylusing around and typing *=-1 in the value box.
+This is faster than stylusing around and typing *-1 in the value box.
 
 ## set_playback_range.py
 
