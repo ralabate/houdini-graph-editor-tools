@@ -9,7 +9,6 @@ channel_editor = hou.ui.paneTabOfType(hou.paneTabType.ChannelEditor)
 # get that panetab's delicious graph editor innards
 if channel_editor == None:
     pass
-    #print("ERROR: Could not find paneTab of type ChannelEditor")
 else:
     channel_graph = channel_editor.graph()
     selected_keyframes = channel_graph.selectedKeyframes()
@@ -23,4 +22,3 @@ else:
                 parm.setKeyframe(key)
     else:
         pass
-        #print("ERROR: No keyframes selected")
